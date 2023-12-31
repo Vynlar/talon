@@ -77,7 +77,7 @@ clear down:
     edit.extend_line_down()
     edit.delete()
 
-clear word: edit.delete_word()
+scratcher: edit.delete_word()
 
 clear word left:
     edit.extend_word_left()
@@ -179,9 +179,38 @@ new line below | slap: edit.line_insert_down()
     insert(" ")
 
 # Undo/redo
-undo that: edit.undo()
+nope: edit.undo()
 redo that: edit.redo()
 
 # Save
-file save: edit.save()
-file save all: edit.save_all()
+disk: edit.save()
+disk all: edit.save_all()
+
+# From pokey rule
+tug: edit.left()
+
+tug <number_small> times: user.left_n(number_small)
+
+drain: edit.word_left()
+
+drain <number_small> times: user.words_left(number_small)
+
+push: edit.right()
+
+push <number_small> times: user.right_n(number_small)
+
+step: edit.word_right()
+
+step <number_small> times: user.words_right(number_small)
+
+north: user.up_n(1)
+
+north <number_small> times: user.up_n(number_small)
+
+south: user.down_n(1)
+
+south <number_small> times: user.down_n(number_small)
+
+head: edit.line_start()
+
+tail: edit.line_end()
