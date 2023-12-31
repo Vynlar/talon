@@ -23,7 +23,7 @@ settings():
     # 2 = on but not with zoom mouse mode
     user.mouse_enable_pop_click = 1
 
-    # Enable if you like to use the hissing noise to do mouse scroll
+    # Enable if you like to use the hissing to do mouse scroll
     user.mouse_enable_hiss_scroll = 0
 
     # When enabled, the 'Scroll Mouse' GUI will not be shown.
@@ -68,6 +68,10 @@ settings():
     # 'size aware' keeps absolute window size the same, except full-height or
     # -width windows are resized to stay full-height/width.
     #user.window_snap_screen = "size aware"
+    
+    user.context_sensitive_dictation = 1
+    user.accessibility_dictation = 1
 
 # Uncomment this to enable the curse yes/curse no commands (show hide mouse cursor). See issue #688.
 # tag(): user.mouse_cursor_commands_enable
+

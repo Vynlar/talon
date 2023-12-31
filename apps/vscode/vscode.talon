@@ -35,6 +35,14 @@ symbol hunt all [<user.text>]:
     sleep(50ms)
     insert(text or "")
 
+scout all [<user.text>]:
+    user.vscode("workbench.action.findInFiles")
+    sleep(50ms)
+    insert(text or "")
+
+search next: user.vscode("search.action.focusNextSearchResult")
+search last: user.vscode("search.action.focusPreviousSearchResult")
+
 # Panels
 panel control: user.vscode("workbench.panel.repl.view.focus")
 panel output: user.vscode("workbench.panel.output.focus")
@@ -207,7 +215,7 @@ test run: user.vscode("testing.runAtCursor")
 test run file: user.vscode("testing.runCurrentFile")
 test run all: user.vscode("testing.runAll")
 test run failed: user.vscode("testing.reRunFailTests")
-test run last: user.vscode("testing.reRunLastRun")
+test run last: user.vscode("testing.reRunLaSheet Sheeteun")
 
 test debug: user.vscode("testing.debugAtCursor")
 test debug file: user.vscode("testing.debugCurrentFile")
