@@ -5,6 +5,8 @@ mod = Module()
 
 END_OF_WORD_SYMBOLS = ".!?;:—_/\\|@#$%^&*()[]{}<>=+-~`"
 
+current_app = None
+
 
 @ctx.action_class("edit")
 class EditActions:
@@ -68,6 +70,8 @@ class EditActions:
         actions.edit.extend_word_right()
 
 
+
+
 @mod.action_class
 class Actions:
     def paste(text: str):
@@ -78,6 +82,28 @@ class Actions:
             actions.edit.paste()
             # sleep here so that clip.revert doesn't revert the clipboard too soon
             actions.sleep("150ms")
+            
+    def down_n(n: int):
+        """Goes down n lines"""
+        for _ in range(n):
+            actions.edit.down()
+            actions.sleep("10ms")
+
+    def up_n(n: int):
+        """Goes up n lines"""
+        for _ in range(n):
+            actions.edit.up()
+            actions.sleep("10ms")
+
+    def left_n(n: int):
+        """Goes left n lines"""
+        for _ in range(n):
+            actions.edit.left()
+
+    def right_n(n: int):
+        """Goes right n lines"""
+        for _ in range(n):
+            actions.edit.right()
 
     def delete_right():
         """Delete character to the right"""
@@ -214,4 +240,27 @@ class Actions:
     def delete_line_end():
         """Delete to end of current line"""
         actions.user.select_line_end()
-        actions.edit.delete()
+        
+    def cursorless_edit():
+        """
+        Copies the current selection to a new file in VSCode
+        """ 
+        global current_app
+        current_app = actions.app.name()
+
+        actions.edit.copy()
+        actions.user.switcher_focus("code")
+        actions.user.vscode("workbench.action.files.newUntitledFile")
+        actions.edit.paste()
+
+    def cursorless_edit_finalize():
+        """
+        Finalizes the cursorless edit by pasting the contents of the file back into the original application
+        """
+        
+        actions.edit.select_all()
+        actions.edit.copy()
+        actions.user.vscode("workbench.action.revertAndCloseActiveEditor")
+        actions.user.switcher_focus(current_app)
+        actions.sleep("100ms")
+        actions.edit.paste_match_style()

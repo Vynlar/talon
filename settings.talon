@@ -15,13 +15,13 @@ settings():
     user.mouse_continuous_scroll_amount = 80
 
     # Stop continuous scroll/gaze scroll with a pop
-    user.mouse_enable_pop_stops_scroll = 1
+    user.mouse_enable_pop_stops_scroll = 0
 
     # Enable pop click with 'control mouse' mode.
     # 0 = off
     # 1 = on with eyetracker but not zoom mouse mode
     # 2 = on but not with zoom mouse mode
-    user.mouse_enable_pop_click = 1
+    user.mouse_enable_pop_click = 0
 
     # Enable if you like to use the hissing to do mouse scroll
     user.mouse_enable_hiss_scroll = 0

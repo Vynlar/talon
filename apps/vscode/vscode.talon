@@ -1,4 +1,4 @@
-#custom vscode commands go here
+.#custom vscode commands go here
 app: vscode
 -
 tag(): user.find_and_replace
@@ -23,6 +23,7 @@ bar search: user.vscode("workbench.view.search")
 bar source: user.vscode("workbench.view.scm")
 bar test: user.vscode("workbench.view.testing.focus")
 bar switch: user.vscode("workbench.action.toggleSidebarVisibility")
+bar GitHub: user.vscode("pr:github.focus")
 
 # Symbol search
 symbol hunt [<user.text>]:
@@ -154,6 +155,7 @@ close other tabs: user.vscode("workbench.action.closeOtherEditors")
 close all tabs: user.vscode("workbench.action.closeAllEditors")
 close tabs way right: user.vscode("workbench.action.closeEditorsToTheRight")
 close tabs way left: user.vscode("workbench.action.closeEditorsToTheLeft")
+tab close force: user.vscode("workbench.action.revertAndCloseActiveEditor")
 
 # Folding
 fold that: user.vscode("editor.fold")
@@ -291,3 +293,14 @@ cell run: user.vscode("notebook.cell.execute")
 
 install local: user.vscode("workbench.extensions.action.installVSIX")
 preview markdown: user.vscode("markdown.showPreview")
+
+# GitHub
+diff next:
+    key(alt-f5)
+
+diff previous:
+    key(shift-alt-f5)
+
+diff comment: user.vscode("pr.addFileComment")
+slot {self.letter} [{self.letter}]:
+    user.run_rpc_command("andreas.focusTab", "{letter_1}{letter_2 or ''}")
