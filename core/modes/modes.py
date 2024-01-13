@@ -43,3 +43,10 @@ class Actions:
                 actions.user.engine_wake()
                 # note: this may not do anything for all versions of Dragon. Requires Pro.
                 actions.user.engine_mimic("start normal mode")
+
+    def parrot_awake(power: int):
+        """Awake talon if pop is loud enough"""
+        print(power)
+        if power > 30:
+            actions.speech.enable()
+        

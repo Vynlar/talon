@@ -177,7 +177,7 @@ symbol_key_words = {
     "question": "?",
     "apostrophe": "'",
     "lacket": "[",
-    "racket": "[",
+    "racket": "]",
     "square": "[",
     "R square": "]",
     "right square": "]",

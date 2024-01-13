@@ -6,4 +6,7 @@ not speech.engine: dragon
 #
 # It's a useful and well known command, though, so if you're using any other speech
 # engine, this controls Talon.
-^(wake up)+$: speech.enable()
+^(wake up)+$:               speech.enable()
+
+#parrot(palate_click):
+#    user.parrot_awake(power)

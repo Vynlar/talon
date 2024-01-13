@@ -215,13 +215,22 @@ head:                       edit.line_start()
 
 tail:                       edit.line_end()
 
-credit this:                user.cursorless_edit()
+credit this:
+    edit.copy()
+    user.cursorless_edit()
+
+credit paste:
+    user.cursorless_edit()
+
+credit done:
+    user.cursorless_cancel()
 
 credit all:
     edit.select_all()
+    edit.copy()
     user.cursorless_edit()
 
-credit done:                user.cursorless_edit_finalize()
+credit commit:              user.cursorless_edit_finalize()
 
 drink:                      edit.line_insert_up()
 pour:                       edit.line_insert_down()

@@ -1,0 +1,21 @@
+{
+  "xmlTag": {
+    "definitions": [
+      {
+        "scope": {
+          "langIds": [
+            "typescriptreact"
+          ]
+        },
+        "body": [
+          "<$tagName>$body</$tagName>"
+        ]
+      }
+    ],
+    "description": "",
+    "variables": {
+      "tagName": {},
+      "body": {}
+    }
+  }
+}

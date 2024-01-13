@@ -248,18 +248,27 @@ class Actions:
         global current_app
         current_app = actions.app.name()
 
-        actions.edit.copy()
         actions.user.switcher_focus("code")
         actions.user.vscode("workbench.action.files.newUntitledFile")
         actions.edit.paste()
+
+    def cursorless_cancel():
+        """
+        Cancels the cursorless edit by closing the new file in VSCode
+        """
+        global current_app
+        current_app = None
+        actions.edit.select_all()
+        actions.edit.copy()
+        actions.user.vscode("workbench.action.revertAndCloseActiveEditor")
 
     def cursorless_edit_finalize():
         """
         Finalizes the cursorless edit by pasting the contents of the file back into the original application
         """
-        
-        actions.edit.select_all()
-        actions.edit.copy()
+        global current_app
+        current_app = None
+
         actions.user.vscode("workbench.action.revertAndCloseActiveEditor")
         actions.user.switcher_focus(current_app)
         actions.sleep("100ms")

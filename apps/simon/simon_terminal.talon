@@ -2,10 +2,6 @@ tag: terminal
 
 -
 
-go repo web:
-    insert("cdw")
-    key(enter)
-
 start frontend:
     insert("npm run dev-server-docker")
     key(enter)
