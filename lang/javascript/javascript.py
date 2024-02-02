@@ -26,7 +26,7 @@ ctx.lists["user.code_common_function"] = {
 
 mod.list("code_common_member_function", "Function to use in a dotted chain, eg .foo()")
 
-ctx.lists["user.code_common_member_function"] = {
+common_member_functions = {
     "catch": "catch",
     "concat": "concat",
     "filter": "filter",
@@ -46,6 +46,23 @@ ctx.lists["user.code_common_member_function"] = {
     "substring": "substring",
     "then": "then",
 }
+
+testing_library_prefixes = ['get', 'find', 'query', 'get all', 'find all', 'query all']
+testing_library_suffixes = ['label text', 'text', 'placeholder text', 'role', 'test id', 'display value', 'title']
+testing_library_functions = [f"{prefix} by {suffix}" for prefix in testing_library_prefixes for suffix in testing_library_suffixes]
+
+def to_camel_case(string: str):
+    """
+    Takes a string like 'foo bar baz' and returns 'fooBarBaz'
+    Note: the first word is not capitalized
+    """
+    return "".join(word.capitalize() if i > 0 else word for i, word in enumerate(string.split()))
+    
+for function in testing_library_functions:
+    as_camel_case = to_camel_case(function)
+    common_member_functions[function] = as_camel_case
+
+ctx.lists["user.code_common_member_function"] = common_member_functions 
 
 ctx.lists["user.code_keyword"] = {
     "a sink": "async ",

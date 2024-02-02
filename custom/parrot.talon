@@ -5,10 +5,11 @@ parrot(cluck):
 	print("cluck")
 
 parrot(tut):
+	print("tut")
 	core.repeat_command(1)
 
 parrot(palate_click):
-	key(cmd-tab)
+	print("palate_click")
 
 parrot(pop):
 	print("pop")

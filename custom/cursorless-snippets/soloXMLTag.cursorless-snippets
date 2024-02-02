@@ -1,5 +1,5 @@
 {
-  "xmlTag": {
+  "soloXMLTag": {
     "definitions": [
       {
         "scope": {
@@ -9,17 +9,16 @@
           ]
         },
         "body": [
-          "<$tagName>$body</$tagName>"
+          "<$tagName $attributes />"
         ]
       }
     ],
-    "description": "A tag with children",
+    "description": "A self closing tag",
     "variables": {
       "tagName": {
-        "formatter": "pascalCase" 
+        "formatter": "pascalCase"
       },
-      "body": {}
-    },
-    "insertionScopeTypes": ["xmlElement"]
+      "attributes": {}
+    }
   }
 }

@@ -1,6 +1,8 @@
-*Spoken form, Cursorless identifier
+Spoken form, Cursorless identifier
 if, ifStatement
 if else, ifElseStatement
 try, tryCatchStatement
 log,printStatement
 tag,xmlTag
+solo tag,soloXMLTag
+lambda,lambda
