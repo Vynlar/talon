@@ -1,4 +1,4 @@
-#custom vscode commands go here
+b#custom vscode commands go here
 app: vscode
 -
 tag(): user.find_and_replace
@@ -321,3 +321,6 @@ accept all current:         user.vscode("merge-conflict.accept.all-current")
 accept all incoming:        user.vscode("merge-conflict.accept.all-incoming")
 conflict next:              user.vscode("merge-conflict.next")
 conflict previous:          user.vscode("merge-conflict.previous")
+
+yes: key("tab")
+advise: key("ctrl-space")

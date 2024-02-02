@@ -21,6 +21,7 @@ ctx_react.lists["user.dna_sizes"] = {
 
 @mod.capture(rule="{user.dna_sizes}")
 def dna_space(m) -> Dict[str, str]:
+    print(f'sizes: {m.dna_sizes}')
     return {
         "space": m.dna_sizes
     }
@@ -35,7 +36,9 @@ def serialize_attributes(attributes: Dict[str, str]):
 
 @mod.action_class
 class Actions:
-    def insert_tag(tag_name: str, attributes: Dict[str, str] = {}):
+
+
+    def insert_tag(tag_name: str, attributes: Dict[str, str]):
         """
         Inserts a tag with the given parameters
         """
@@ -49,6 +52,7 @@ class Actions:
         """
         attribute_string = serialize_attributes(attributes)
         actions.user.insert(f"<{tag_name}{attribute_string} />")
+
         
         
         

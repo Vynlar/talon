@@ -166,7 +166,7 @@ punctuation_words = {
     "hyphen": "-",
     "L paren": "(",
     "left paren": "(",
-    "repper": ")",
+    "raren": ")",
     "right paren": ")",
 }
 symbol_key_words = {
@@ -193,7 +193,7 @@ symbol_key_words = {
     "down score": "_",
     "underscore": "_",
     "paren": "(",
-    "leper": "(",
+    "laren": "(",
     "lacer": "{",
     "brace": "{",
     "left brace": "{",
