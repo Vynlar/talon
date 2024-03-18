@@ -6,3 +6,6 @@ log,printStatement
 tag,xmlTag
 solo tag,soloXMLTag
 lambda,lambda
+component,reactComponent
+describe, describeBlock
+test, itBlock
