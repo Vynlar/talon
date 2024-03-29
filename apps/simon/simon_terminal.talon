@@ -26,6 +26,12 @@ simon shell local:
     insert("simon-docker run dev ./manage.py shell")
     key(enter)
 
+simon run local:
+    insert("simon-docker run dev ./manage.py ")
+
+simon run prod:
+    insert("simon-docker run prod ./manage.py ")
+
 amazon login:
     insert("aws sso login")
     key(enter)

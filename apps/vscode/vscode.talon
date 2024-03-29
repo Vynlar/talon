@@ -1,4 +1,4 @@
-b#custom vscode commands go here
+#custom vscode commands go here
 app: vscode
 -
 tag(): user.find_and_replace
@@ -24,6 +24,7 @@ bar source:                 user.vscode("workbench.view.scm")
 bar test:                   user.vscode("workbench.view.testing.focus")
 bar switch:                 user.vscode("workbench.action.toggleSidebarVisibility")
 bar GitHub:                 user.vscode("pr:github.focus")
+bar copilot:                user.vscode("workbench.panel.chat.view.copilot.focus")
 
 # Symbol search
 symbol hunt [<user.text>]:
@@ -322,5 +323,8 @@ accept all incoming:        user.vscode("merge-conflict.accept.all-incoming")
 conflict next:              user.vscode("merge-conflict.next")
 conflict previous:          user.vscode("merge-conflict.previous")
 
-yes: key("tab")
-advise: key("ctrl-space")
+yes:                        key("tab")
+advise:                     key("ctrl-space")
+next:
+    key("escape")
+    key("tab")

@@ -8,5 +8,5 @@ not speech.engine: dragon
 # engine, this controls Talon.
 ^(wake up)+$:               speech.enable()
 
-#parrot(palate_click):
-#    user.parrot_awake(power)
+parrot(palate_click):
+    speech.enable()
