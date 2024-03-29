@@ -1,3 +1,7 @@
+mode: command
+mode: dictation
+-
+
 track:                      tracking.control_toggle()
 control off:                user.mouse_sleep()
 zoom mouse:                 tracking.control_zoom_toggle()
@@ -14,6 +18,7 @@ touch:
     user.mouse_drag_end()
 
 parrot(tsk):
+    print("clicking")
     # close zoom if open
     user.zoom_close()
     mouse_click(0)
