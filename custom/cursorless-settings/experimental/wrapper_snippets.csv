@@ -8,3 +8,5 @@ try, tryCatchStatement.body
 tag, xmlTag.body
 call, call.callee
 lambda, lambda.body
+describe, describeBlock.body
+test, itBlock.body

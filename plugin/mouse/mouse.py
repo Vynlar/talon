@@ -161,6 +161,14 @@ class Actions:
         """Scrolls down"""
         mouse_scroll(amount * setting_mouse_wheel_down_amount.get())()
 
+    def mouse_scroll_down_parrot(amount: float = 1):
+        """Scrolls down"""
+        mouse_scroll(amount)()
+
+    def mouse_scroll_up_parrot(amount: float = 1):
+        """Scrolls down"""
+        mouse_scroll(-amount)()
+
     def mouse_scroll_down_continuous():
         """Scrolls down continuously"""
         global continuous_scoll_mode
