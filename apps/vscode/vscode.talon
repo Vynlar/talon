@@ -64,6 +64,10 @@ show shortcuts:             user.vscode("workbench.action.openGlobalKeybindings"
 show shortcuts json:        user.vscode("workbench.action.openGlobalKeybindingsFile")
 show snippets:              user.vscode("workbench.action.openSnippets")
 
+# Workspaces
+project open:               key("cmd-o")
+project open recent:        user.vscode("workbench.action.openRecent")
+
 # VSCode Snippets
 snip (last | previous):     user.vscode("jumpToPrevSnippetPlaceholder")
 snip next:                  user.vscode("jumpToNextSnippetPlaceholder")
