@@ -158,14 +158,15 @@ go last mark:               user.vscode("bookmarks.jumpToPrevious")
 
 close other tabs:           user.vscode("workbench.action.closeOtherEditors")
 close all tabs:             user.vscode("workbench.action.closeAllEditors")
-close tabs way right:       user.vscode("workbench.action.closeEditorsToTheRight")
-close tabs way left:        user.vscode("workbench.action.closeEditorsToTheLeft")
+close tabs right:           user.vscode("workbench.action.closeEditorsToTheRight")
+close tabs left:            user.vscode("workbench.action.closeEditorsToTheLeft")
 close tab force:            user.vscode("workbench.action.revertAndCloseActiveEditor")
 tab close force:            user.vscode("workbench.action.revertAndCloseActiveEditor")
 tab move next:              user.vscode("workbench.action.moveEditorToNextGroup")
 tab move (previous|last):   user.vscode("workbench.action.moveEditorToPreviousGroup")
 tab move first:             user.vscode("workbench.action.moveEditorToFirstGroup")
 tab move last:              user.vscode("workbench.action.moveEditorToLastGroup")
+tab hunt:                   user.vscode("workbench.action.showAllEditors")
 
 # Folding
 fold that:                  user.vscode("editor.fold")

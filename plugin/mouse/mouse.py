@@ -163,11 +163,13 @@ class Actions:
 
     def mouse_scroll_down_parrot(amount: float = 1):
         """Scrolls down"""
-        mouse_scroll(amount)()
+        if actions.tracking.control_enabled():
+            mouse_scroll(amount * 2)()
 
     def mouse_scroll_up_parrot(amount: float = 1):
         """Scrolls down"""
-        mouse_scroll(-amount)()
+        if actions.tracking.control_enabled():
+            mouse_scroll(-amount * 1.3)()
 
     def mouse_scroll_down_continuous():
         """Scrolls down continuously"""

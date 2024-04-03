@@ -7,7 +7,7 @@ app: vscode
 lookup:                     user.vscode("dendron.lookupNote")
 lookup <user.text>:
     user.vscode("dendron.lookupNote")
-    sleep(100)
+    sleep(100ms)
     insert(user.text or "")
 lookup <user.text> clap:
     user.vscode("dendron.lookupNote")
