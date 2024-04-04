@@ -7,6 +7,3 @@ not speech.engine: dragon
 # It's a useful and well known command, though, so if you're using any other speech
 # engine, this controls Talon.
 ^(wake up)+$:               speech.enable()
-
-parrot(alveolar_click):
-    speech.enable()
