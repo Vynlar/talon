@@ -9,5 +9,3 @@ tag(): user.git
 tag(): user.kubectl
 tag(): user.tabs
 tag(): user.readline
-tag(): user.npm
-tag(): user.simon

@@ -3,7 +3,7 @@ zoom in:                    edit.zoom_in()
 zoom out:                   edit.zoom_out()
 zoom reset:                 edit.zoom_reset()
 
-# Searching
+# edit
 find it:                    edit.find()
 next one:                   edit.find_next()
 
@@ -76,8 +76,6 @@ clear up:
 clear down:
     edit.extend_line_down()
     edit.delete()
-
-scratcher:                  edit.delete_word()
 
 clear word left:
     edit.extend_word_left()
@@ -177,60 +175,3 @@ new line below | slap:      edit.line_insert_down()
     insert(" ")
     user.insert_many(symbol_key_list)
     insert(" ")
-
-# Undo/redo
-nope:                       edit.undo()
-redo that:                  edit.redo()
-
-# Save
-disk:                       edit.save()
-disk all:                   edit.save_all()
-
-# From pokey rule
-tug:                        edit.left()
-
-tug <number_small> times:   user.left_n(number_small)
-
-drain:                      edit.word_left()
-
-drain <number_small> times: user.words_left(number_small)
-
-push:                       edit.right()
-
-push <number_small> times:  user.right_n(number_small)
-
-step:                       edit.word_right()
-
-step <number_small> times:  user.words_right(number_small)
-
-north:                      user.up_n(1)
-
-north <number_small> times: user.up_n(number_small)
-
-south:                      user.down_n(1)
-
-south <number_small> times: user.down_n(number_small)
-
-head:                       edit.line_start()
-
-tail:                       edit.line_end()
-
-credit this:
-    edit.copy()
-    user.cursorless_edit()
-
-credit paste:
-    user.cursorless_edit()
-
-credit done:
-    user.cursorless_cancel()
-
-credit all:
-    edit.select_all()
-    edit.copy()
-    user.cursorless_edit()
-
-credit commit:              user.cursorless_edit_finalize()
-
-drink:                      edit.line_insert_up()
-pour:                       edit.line_insert_down()

@@ -79,16 +79,6 @@ class AppActions:
     def window_open():
         actions.user.vscode("workbench.action.newWindow")
 
-    def scroll_down(repeat: int):
-        for i in range(repeat):
-            actions.user.vscode("extension.smoothscroll_scrollDown")
-
-    def scroll_up(repeat: int):
-        for i in range(repeat):
-            actions.user.vscode("extension.smoothscroll_scrollUp")
-
-        
-
 
 @ctx.action_class("code")
 class CodeActions:

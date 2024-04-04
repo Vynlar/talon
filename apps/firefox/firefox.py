@@ -57,7 +57,4 @@ class BrowserActions:
         actions.key("alt-home")
 
 
-@ctx.action_class("edit")
-class EditActions:
-    def paste_match_style():
-        actions.key("cmd-shift-v")
+

@@ -18,13 +18,3 @@ snap <user.running_applications> <user.window_snap_position>:
     user.snap_app(running_applications, window_snap_position)
 snap <user.running_applications> [screen] <number>:
     user.move_app_to_screen(running_applications, number)
-
-coder:                      user.switcher_focus_window_by_name("code", "— web")
-coder talon:                user.switcher_focus_window_by_name("code", "— talon")
-notes:                      user.switcher_focus_window_by_name("code", "— dendron")
-portal:                     user.switcher_focus("firefox")
-term:                       user.switcher_focus("iTerm2")
-slacker:
-    user.switcher_focus("firefox")
-    sleep(0.1)
-    user.rango_command_without_target("focusTabByText", "Slack")
