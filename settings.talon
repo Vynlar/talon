@@ -68,10 +68,11 @@ settings():
     # 'size aware' keeps absolute window size the same, except full-height or
     # -width windows are resized to stay full-height/width.
     #user.window_snap_screen = "size aware"
-    
+
     user.context_sensitive_dictation = 1
     user.accessibility_dictation = 1
 
+    # speech.timeout = 0.4
+
 # Uncomment this to enable the curse yes/curse no commands (show hide mouse cursor). See issue #688.
 # tag(): user.mouse_cursor_commands_enable
-
