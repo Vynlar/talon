@@ -21,12 +21,12 @@ https://misc.automation.simondata.net/,miscellaneous Jenkins
 https://deploy.automation.simondata.net/,deploy Jenkins
 https://journeys.automation.simondata.net/,journeys Jenkins
 https://pipes.automation.simondata.net/,pipes Jenkins
-https://simondata.simondata.com/,simon prod
+https://simonconnected.simondata.com/,simon prod
 https://admin.simondata.com/,simon admin
 https://admin.simondata.com/gc,ground control 
 http://admin.simondata.localhost:8000/,simon local admin 
 https://simontest.simondata.com/,simon prod test
-http://simondata.simondata.localhost:8000/,simon local
+http://simonconnected.simondata.localhost:8000/,simon local
 https://simondata.atlassian.net/jira/software/c/projects/PDE/boards/205,injera 
 https://simondata.atlassian.net/wiki/home,confluence
 http://localhost:6006,storybook
