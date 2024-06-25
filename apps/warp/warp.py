@@ -3,12 +3,12 @@ from talon import Context, Module, actions
 ctx = Context()
 mod = Module()
 
-mod.apps.iterm2 = """
+mod.apps.warp = """
 os: mac
-and app.bundle: com.googlecode.iterm2
+and app.bundle: dev.warp.Warp-Stable
 """
 ctx.matches = r"""
-app: iterm2
+app: warp
 """
 
 directories_to_remap = {}
@@ -17,11 +17,11 @@ directories_to_exclude = {}
 
 @ctx.action_class("edit")
 class EditActions:
-    def line_start():
-        actions.key("home")
+    # def line_start():
+    #     actions.key("home")
 
-    def line_end():
-        actions.key("end")
+    # def line_end():
+    #     actions.key("end")
 
 
 @ctx.action_class("user")
@@ -73,9 +73,9 @@ class UserActions:
     def tab_jump(number: int):
         actions.key(f"cmd-{number}")
 
-    def tab_final():
-        actions.key("cmd-9")
+    # def tab_final():
+    #     actions.key("cmd-9")
 
-    def terminal_clear_screen():
-        """Clear screen"""
-        actions.key("ctrl-l")
+    # def terminal_clear_screen():
+    #     """Clear screen"""
+    #     actions.key("ctrl-l")
