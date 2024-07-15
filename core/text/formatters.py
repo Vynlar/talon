@@ -164,6 +164,7 @@ formatters_dict = {
     "SPACE_SURROUNDED_STRING": (SEP, surround(" ")),
     "DOT_SEPARATED": words_with_joiner("."),
     "DOT_SNAKE": (NOSEP, lambda i, word, _: "." + word if i == 0 else "_" + word),
+    "ALL_SLASHES": (NOSEP, every_word(lambda w: "/" + w)),
     "SLASH_SEPARATED": words_with_joiner("/"),
     "CAPITALIZE_FIRST_WORD": (
         SEP,
@@ -184,7 +185,8 @@ code_formatter_names = {
     "kebab": "DASH_SEPARATED",
     "packed": "DOUBLE_COLON_SEPARATED",
     "padded": "SPACE_SURROUNDED_STRING",
-    "slasher": "SLASH_SEPARATED",
+    "slasher": "ALL_SLASHES",
+    "conga": "SLASH_SEPARATED",
     "smash": "NO_SPACES",
     "snake": "SNAKE_CASE",
     "upper snake": "UPPER_SNAKE_CASE",
