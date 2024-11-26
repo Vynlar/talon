@@ -80,7 +80,7 @@ settings():
     user.context_sensitive_dictation = 1
     user.accessibility_dictation = 1
 
-    speech.timeout = 0.45
+    speech.timeout = 0.55
 
     # Puts Talon into sleep mode if no commands are spoken for a defined period of time.
     # user.listening_timeout_minutes = 3
