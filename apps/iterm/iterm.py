@@ -79,3 +79,7 @@ class UserActions:
     def terminal_clear_screen():
         """Clear screen"""
         actions.key("ctrl-l")
+
+    def terminal_kill_all():
+        """kills the running command"""
+        actions.key("ctrl-c")
