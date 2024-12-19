@@ -36,7 +36,7 @@ ctx.lists["self.stdint_types"] = {
     "long long": "int64_t",
     "int": "int32_t",
     "integer": "int32_t",
-    "void": "void",
+    # "void": "void",
     "double": "double",
     "struct": "struct",
     "struck": "struct",
