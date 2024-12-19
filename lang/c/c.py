@@ -52,7 +52,7 @@ ctx.lists["self.c_types"] = {
     "long": "long",
     "int": "int",
     "integer": "int",
-    "void": "void",
+    # "void": "void",
     "double": "double",
     "struct": "struct",
     "struck": "struct",
