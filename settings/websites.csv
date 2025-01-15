@@ -27,7 +27,7 @@ https://admin.simondata.com/gc,ground control
 http://admin.simondata.localhost:8000/,simon local admin 
 https://simontest.simondata.com/,simon prod test
 http://simonconnected.simondata.localhost:8000/,simon local
-https://simondata.atlassian.net/jira/software/c/projects/PDE/boards/234,jira 
+https://simondata.atlassian.net/jira/software/c/projects/PDE/boards/237,jira 
 https://simondata.atlassian.net/wiki/home,confluence
 http://localhost:6006,storybook
 https://radico.pagerduty.com/incidents?assignedToUser=PXZYEF1,pager duty
