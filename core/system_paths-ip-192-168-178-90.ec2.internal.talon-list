@@ -1,0 +1,16 @@
+list: user.system_paths
+hostname: ip-192-168-178-90.ec2.internal
+-
+user: /Users/adrian
+profile: /Users/adrian
+desktop: /Users/adrian/Desktop
+desk: /Users/adrian/Desktop
+documents: /Users/adrian/Documents
+docks: /Users/adrian/Documents
+downloads: /Users/adrian/Downloads
+music: /Users/adrian/Music
+pictures: /Users/adrian/Pictures
+videos: /Users/adrian/Videos
+talon home: /Users/adrian/.talon
+talon user: /Users/adrian/.talon/user
+web: /Users/adrian/git/Radico/web

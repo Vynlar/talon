@@ -9,7 +9,7 @@ camera overlay: tracking.control_debug_toggle()
 run calibration: tracking.calibrate()
 touch:
     # close zoom if open
-    user.zoom_close()
+    tracking.zoom_cancel()
     mouse_click(0)
     # close the mouse grid if open
     user.grid_close()
@@ -30,14 +30,14 @@ parrot(tsk):
 
 righty:
     # close zoom if open
-    user.zoom_close()
+    tracking.zoom_cancel()
     mouse_click(1)
     # close the mouse grid if open
     user.grid_close()
 
 mid click:
     # close zoom if open
-    user.zoom_close()
+    tracking.zoom_cancel()
     mouse_click(2)
     # close the mouse grid
     user.grid_close()
@@ -51,7 +51,7 @@ mid click:
 #super = windows key
 <user.modifiers> touch:
     # close zoom if open
-    user.zoom_close()
+    tracking.zoom_cancel()
     key("{modifiers}:down")
     mouse_click(0)
     key("{modifiers}:up")
@@ -59,7 +59,7 @@ mid click:
     user.grid_close()
 <user.modifiers> righty:
     # close zoom if open
-    user.zoom_close()
+    tracking.zoom_cancel()
     key("{modifiers}:down")
     mouse_click(1)
     key("{modifiers}:up")
@@ -67,14 +67,14 @@ mid click:
     user.grid_close()
 (dub click | duke):
     # close zoom if open
-    user.zoom_close()
+    tracking.zoom_cancel()
     mouse_click()
     mouse_click()
     # close the mouse grid
     user.grid_close()
 (trip click | trip lick):
     # close zoom if open
-    user.zoom_close()
+    tracking.zoom_cancel()
     mouse_click()
     mouse_click()
     mouse_click()
@@ -82,13 +82,13 @@ mid click:
     user.grid_close()
 left drag | drag | drag start:
     # close zoom if open
-    user.zoom_close()
+    tracking.zoom_cancel()
     user.mouse_drag(0)
     # close the mouse grid
     user.grid_close()
 right drag | righty drag:
     # close zoom if open
-    user.zoom_close()
+    tracking.zoom_cancel()
     user.mouse_drag(1)
     # close the mouse grid
     user.grid_close()
@@ -101,7 +101,11 @@ wheel tiny [down]: user.mouse_scroll_down(0.2)
 wheel tiny [down] here:
     user.mouse_move_center_active_window()
     user.mouse_scroll_down(0.2)
+wheel downer <number_small>: user.mouse_scroll_down_continuous(number_small)
 wheel downer: user.mouse_scroll_down_continuous()
+wheel downer here <number_small>:
+    user.mouse_move_center_active_window()
+    user.mouse_scroll_down_continuous(number_small)
 wheel downer here:
     user.mouse_move_center_active_window()
     user.mouse_scroll_down_continuous()
@@ -113,7 +117,11 @@ wheel tiny up: user.mouse_scroll_up(0.2)
 wheel tiny up here:
     user.mouse_move_center_active_window()
     user.mouse_scroll_up(0.2)
+wheel upper <number_small>: user.mouse_scroll_up_continuous(number_small)
 wheel upper: user.mouse_scroll_up_continuous()
+wheel upper here <number_small>:
+    user.mouse_move_center_active_window()
+    user.mouse_scroll_up_continuous(number_small)
 wheel upper here:
     user.mouse_move_center_active_window()
     user.mouse_scroll_up_continuous()
