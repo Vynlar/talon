@@ -1,8 +1,5 @@
 list: user.system_paths
-hostname: adrians
--
-
-MacBook-Pro
+hostname: adrians-MacBook-Pro
 -
 user: /Users/adrian
 desktop: /Users/adrian/Desktop
