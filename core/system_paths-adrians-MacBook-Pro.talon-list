@@ -1,0 +1,20 @@
+list: user.system_paths
+hostname: adrians
+-
+
+MacBook-Pro
+-
+user: /Users/adrian
+desktop: /Users/adrian/Desktop
+desk: /Users/adrian/Desktop
+documents: /Users/adrian/Documents
+docks: /Users/adrian/Documents
+downloads: /Users/adrian/Downloads
+music: /Users/adrian/Music
+pictures: /Users/adrian/Pictures
+videos: /Users/adrian/Videos
+talon home: /Users/adrian/.talon
+talon recordings: /Users/adrian/.talon/recordings
+talon user: /Users/adrian/.talon/user
+home: /Users/adrian
+web: /Users/adrian/git/Radico/web
