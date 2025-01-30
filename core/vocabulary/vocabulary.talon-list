@@ -1,5 +1,6 @@
 list: user.vocabulary
 -
+
 N map: nmap
 under documented: under-documented
 nmap
@@ -28,4 +29,7 @@ jango: django
 lewis: louis
 tech
 add
-	
+Citrix
+VPN
+DNS
+Minecraft

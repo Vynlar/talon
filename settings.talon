@@ -33,6 +33,9 @@ settings():
     # If `true`, stop mouse drag with a pop
     user.mouse_enable_pop_stops_drag = true
 
+    # If `true`, stop mouse drag with a pop
+    user.mouse_enable_pop_stops_drag = true
+
     # Choose how pop click should work in 'control mouse' mode
     # 0 = off
     # 1 = on with eyetracker but not zoom mouse mode
