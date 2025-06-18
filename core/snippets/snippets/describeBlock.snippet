@@ -1,0 +1,15 @@
+name: describeBlock
+description: A test describe block
+phrase: describe
+
+$body.wrapperPhrase: describe
+---
+
+language: typescriptreact | typescript
+
+$name.insertionFormatter: NOOP
+-
+describe('$name', () => {
+    $body
+})
+---

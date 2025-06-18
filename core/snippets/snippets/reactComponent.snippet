@@ -1,0 +1,19 @@
+name: reactComponent
+description: A react component with typescript type
+phrase: component
+
+$1.insertionFormatter: PUBLIC_CAMEL_CASE
+---
+
+language: typescriptreact
+-
+interface ${1}Props {
+
+}
+
+const ${1} = (props: ${1}Props) => {
+    return (
+        $body
+    )
+}
+---

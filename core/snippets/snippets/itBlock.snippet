@@ -1,0 +1,15 @@
+name: itBlock
+description: A test describe block
+phrase: test
+
+$body.wrapperPhrase: test
+---
+
+language: typescriptreact | typescript
+
+$name.insertionFormatter: NOOP
+-
+it('$name', $async () => {
+    $body
+})
+---

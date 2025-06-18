@@ -120,3 +120,6 @@ settings():
 # By default you need to say "numb one" to write "1". If you uncomment this,
 # you can say "one" to write "1".
 # tag(): user.unprefixed_numbers
+
+# Enable the community snippets in cursorless
+tag(): user.cursorless_use_community_snippets
