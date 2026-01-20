@@ -1,25 +1,10 @@
-language: html
+language: html | javascriptreact | typescriptreact
 ---
 
-name: element
-phrase: element | tag
-insertionScope: xmlElement
-
-$1.insertionFormatter: PUBLIC_CAMEL_CASE
-$0.wrapperPhrase: tag
-$0.wrapperScope: xmlElement
+name: attributeClassName
+phrase: class name
 -
-<$1>
-    $0
-</$1>
----
-
-name: attribute
-phrase: attribute
-
-$1.insertionFormatter: PRIVATE_CAMEL_CASE
--
-$1=$0
+className="$0"
 ---
 
 name: table
@@ -45,12 +30,4 @@ phrase: list
 <ul>
     <li>$0</li>
 </ul>
----
-
-name: soloTag
-phrase: solo tag
-
-$1.insertionFormatter: PUBLIC_CAMEL_CASE
--
-<$1$0/>
 ---

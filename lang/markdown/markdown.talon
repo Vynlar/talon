@@ -41,6 +41,4 @@ list six:
 {user.markdown_code_block_language} block:
     user.insert_snippet("```{markdown_code_block_language}\n$0\n```")
 
-insert link:
-    "[]()"
-    key(left:3)
+link: user.insert_snippet_by_name("link")

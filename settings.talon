@@ -21,17 +21,17 @@ settings():
     # Uncomment to always sort help contexts alphabetically.
     # user.help_sort_contexts_by_specificity = false
 
-    # Set the scroll amount for continuous scroll/gaze scroll
+    # Set the scroll amount for continuous scroll
     user.mouse_continuous_scroll_amount = 8
+
+    # Set the scroll multiplier for gaze scroll
+    user.mouse_gaze_scroll_speed_multiplier = 1.0
 
     # Set the maximum acceleration factor when scrolling continuously. 1=constant speed/no acceleration.
     user.mouse_continuous_scroll_acceleration = 1
 
     # If `true`, stop continuous scroll/gaze scroll with a pop
-    user.mouse_enable_pop_stops_scroll = false
-
-    # If `true`, stop mouse drag with a pop
-    user.mouse_enable_pop_stops_drag = true
+    user.mouse_enable_pop_stops_scroll = true
 
     # If `true`, stop mouse drag with a pop
     user.mouse_enable_pop_stops_drag = true
@@ -40,10 +40,14 @@ settings():
     # 0 = off
     # 1 = on with eyetracker but not zoom mouse mode
     # 2 = on but not with zoom mouse mode
-    user.mouse_enable_pop_click = 0
+    user.mouse_enable_pop_click = 1
 
     # If `true`, use a hissing noise to scroll continuously
     user.mouse_enable_hiss_scroll = false
+
+    # How much time a hiss must last for to be considered a hiss rather than
+    # part of speech, in ms
+    user.hiss_scroll_debounce_time = 100
 
     # If `true`, hide the continuous scroll/gaze scroll GUI
     user.mouse_hide_mouse_gui = false
@@ -74,6 +78,9 @@ settings():
     # .snippet files. Changing this setting requires a restart of Talon.
     # user.snippets_dir = "snippets"
 
+    # Set to the number of spaces to use for each tab when inserting snippets as raw text (without editor support). Set to -1 to insert tabs as tabs, such as in code editors that can expand tabs in pasted or typed text. This setting is provided for applications like web browsers and chat apps that do not understand code formatting.
+    user.snippet_raw_text_spaces_per_tab = 4
+
     # Uncomment to insert text longer than 10 characters (customizable) by pasting from
     # the clipboard. This is often faster than typing.
     # user.paste_to_insert_threshold = 10
@@ -89,11 +96,6 @@ settings():
     # 'size aware' keeps absolute window size the same, except full-height or
     # -width windows are resized to stay full-height/width.
     # user.window_snap_screen = "size aware"
-
-    user.context_sensitive_dictation = 1
-    user.accessibility_dictation = 1
-
-    speech.timeout = 0.55
 
     # Puts Talon into sleep mode if no commands are spoken for a defined period of time.
     # user.listening_timeout_minutes = 3
@@ -121,3 +123,6 @@ settings():
 # you can say "one" to write "1".
 # tag(): user.unprefixed_numbers
 
+# Uncomment the below to enable the experimental window layout commands
+# defined in window_layout.talon
+# tag(): user.experimental_window_layout
