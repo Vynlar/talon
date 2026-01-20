@@ -121,5 +121,3 @@ settings():
 # you can say "one" to write "1".
 # tag(): user.unprefixed_numbers
 
-# Enable the community snippets in cursorless
-tag(): user.cursorless_use_community_snippets
